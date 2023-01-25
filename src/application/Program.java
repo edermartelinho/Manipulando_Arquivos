@@ -57,7 +57,7 @@ public class Program {
 		 * e) { e.printStackTrace(); }
 		 */
 		
-		
+		/*
 
 		// Manipulando pastas com File
 
@@ -92,6 +92,23 @@ public class Program {
 		System.out.println("Directory created successfully: " + created);
 				
 		sc.close();
+		
+		*/
+		
+		  // Infomacoes do caminho do arquivo
+		
+		
+				Scanner sc = new Scanner(System.in);
+				System.out.println("Enter a file path: ");
+				String strPath = sc.nextLine();
+				
+				File path = new File(strPath);
+				
+				System.out.println("getPath: " + path.getPath());
+				System.out.println("getParent: " + path.getParent());
+				System.out.println("getName: " + path.getName());
+				
+				sc.close();
 		         
 		
 
