@@ -2,9 +2,11 @@ package application;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.util.Scanner;
 
 
 public class Program {
@@ -54,6 +56,14 @@ public class Program {
 				*/
 		
 		
+		
+		/*Criar/recriar arquivo- new FileWriter(path)
+		 * Acrescenta ao arquivo existente- new FileWriter(path,true)
+		 * BufferedWriter(mais rapido)
+		 */
+		
+	/*
+		
  	String[] lines = new String[] {"criando string dentro do arquivo", "java", "java"};
 		
 		String path = "c:\\temp\\out.txt";
@@ -69,6 +79,29 @@ public class Program {
 		catch (IOException e) {
 		 e.printStackTrace();
 		} 
+		*/
+		
+		
+
+		// Manipulando pastas com File
+				
+				
+				Scanner sc = new Scanner(System.in);
+				
+				System.out.println("Enter a folder path: ");
+				String strPath = sc.nextLine();
+				
+				File path = new File(strPath);
+				
+				  //Impreme um array com as pastas do diretorio
+				
+				File[] folders = path.listFiles(File::isDirectory);
+				System.out.println("FOLDERS:");
+				for (File folder : folders) {
+					System.out.println(folder);
+				}
+				
+		
 		
 	}
 }
